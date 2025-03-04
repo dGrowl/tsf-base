@@ -9,7 +9,7 @@ server.register(APIPlugin, { prefix: "/api" })
 const main = async () => {
 	try {
 		await server.listen({ port: 3000 })
-	}	catch (error) {
+	} catch (error) {
 		console.error(error)
 	}
 }

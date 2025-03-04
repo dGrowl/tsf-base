@@ -1,9 +1,7 @@
 import type { FastifyInstance } from "fastify"
 
-const plugin = (server: FastifyInstance) => {
+export const ApiPlugin = (server: FastifyInstance) => {
 	server.get("/", () => {
 		return { message: "Hello, client!" }
 	})
 }
-
-export default plugin

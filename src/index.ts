@@ -1,16 +1,12 @@
-import Fastify from "fastify"
-
-import APIPlugin from "./api/root.js"
-
-const server = Fastify({ logger: true })
-
-server.register(APIPlugin, { prefix: "/api" })
+import { createServer } from "./core/server.js"
 
 const main = async () => {
+	const server = createServer()
+
 	try {
 		await server.listen({ port: 3000 })
 	} catch (error) {
-		console.error(error)
+		server.log.error(error)
 	}
 }
 

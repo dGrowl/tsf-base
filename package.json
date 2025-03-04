@@ -1,5 +1,6 @@
 {
   "name": "tsf-base",
+  "type": "module",
   "version": "1.0.0",
   "description": "Base project for a TypeScript + Fastify server",
   "scripts": {
@@ -11,5 +12,8 @@
   "devDependencies": {
     "@types/node": "^22.13.9",
     "tsx": "^4.19.3"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1"
   }
 }
